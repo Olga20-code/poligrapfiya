@@ -38,7 +38,7 @@ $(document).ready(function() {
 
   $('input[type=tel]').forceNumbericOnly();
 
-  $("#navToggle").click(function () {
+  $(".hamburger").click(function () {
     $(this).toggleClass("active");
     $(".overlay").toggleClass("open");
     // this line ▼ prevents content scroll-behind
@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   $(".overlay a").click(function () {
-    $("#navToggle").toggleClass("active");
+    $(".hamburger").toggleClass("active");
     $(".overlay").toggleClass("open");
     $("body").toggleClass("locked");
   });
@@ -88,5 +88,11 @@ $(document).ready(function() {
     $button.toggleClass('open');
 
     $dropdownContainer.slideToggle();
+  });
+
+  $('.slider').slick({
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
   });
 });
